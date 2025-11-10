@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { sohne } from './fonts'
 import Navigation from "@/app/components/Navigation";
+import Footer from "@/app/components/Footer";
 
 
 const geistSans = Geist({
@@ -25,18 +26,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className={sohne.variable}>
-      <body
-        className={`antialiased ${sohne.className}`}
-      >
-        <Navigation />
-        <main className={''}>
-            <div>
-                {children}
-            </div>
-        </main>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en" className={sohne.variable}>
+            <body className={`antialiased flex flex-col justify-start min-h-screen ${sohne.className}`}>
+                <Navigation/>
+                <main>
+                    <div>
+                        {children}
+                    </div>
+                </main>
+                <Footer/>
+            </body>
+        </html>
+    );
 }
