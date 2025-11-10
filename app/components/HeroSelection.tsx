@@ -34,7 +34,7 @@ export default function HeroSection({
                     {description}
                 </p>
 
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg text-sm transition-colors duration-200">
+                <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-medium py-2 px-6 rounded-lg text-sm transition-colors duration-200 transform hover:-translate-y-0.5">
                     {buttonText}
                 </button>
             </div>

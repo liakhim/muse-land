@@ -29,13 +29,13 @@ export default function HeroSplitWithImage({
 
                     <div className="order-2 lg:order-1">
                         <div className="relative w-full max-w-2xl mx-auto">
-                            <div className="rounded-3xl overflow-hidden shadow-2xl">
+                            <div className="flex flex-col align-middle justify-center rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
                                     src={imageSrc}
                                     alt={imageAlt}
-                                    width={576}
-                                    height={576}
-                                    className="object-cover w-full h-full"
+                                    width={480}
+                                    height={480}
+                                    className="object-cover m-auto"
                                     priority
                                 />
                             </div>
@@ -66,7 +66,7 @@ export default function HeroSplitWithImage({
                                 {description}
                             </p>
 
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-3 px-10 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                                 {buttonText}
                             </button>
                         </div>

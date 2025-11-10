@@ -16,7 +16,7 @@ export default function Navigation() {
     ]
 
     return (
-        <nav style={{position: 'fixed', width: '100%'}} className="bg-gradient-to-r bg-dark-600 text-white shadow-xl">
+        <nav style={{position: 'fixed', width: '100%'}} className="bg-black z-20 text-white shadow-xl">
             <div className="mx-auto px-4 sm:px-6 lg:px-8 container max-w-7xl">
                 <div className="flex items-center justify-between h-16">
                     {/* Логотип */}
@@ -45,7 +45,7 @@ export default function Navigation() {
                     </div>
 
                     {/* Кнопка CTA */}
-                    <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                    <button className="bg-white text-blue-600 cursor-pointer px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg ">
                         Начать
                     </button>
                 </div>

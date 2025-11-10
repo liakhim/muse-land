@@ -8,11 +8,11 @@ export default function Footer() {
     const pathname = usePathname()
 
     const menuItems = [
-        { href: '/', label: 'Главная' },
-        { href: '/about', label: 'О нас' },
-        { href: '/services', label: 'Услуги' },
-        { href: '/portfolio', label: 'Портфолио' },
-        { href: '/contact', label: 'Контакты' },
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About us' },
+        { href: '/services', label: 'Features' },
+        { href: '/blog', label: 'Blog' },
+        { href: '/contact', label: 'Contacts' },
     ]
 
     const contacts = [
@@ -50,7 +50,7 @@ export default function Footer() {
 
                     {/* Навигация - Центр */}
                     <div className="lg:order-2 lg:mx-auto">
-                        <h3 className="font-semibold text-gray-300 mb-4">Страницы</h3>
+                        <h3 className="font-semibold text-gray-300 mb-4">Pages</h3>
                         <nav className="flex flex-col space-y-2">
                             {menuItems.map((item) => (
                                 <Link
@@ -68,7 +68,7 @@ export default function Footer() {
 
                     {/* Контакты - Слева */}
                     <div className="lg:order-1">
-                        <h3 className="font-semibold text-gray-300 mb-4">Контакты</h3>
+                        <h3 className="font-semibold text-gray-300 mb-4">Contacts</h3>
                         <div className="flex flex-col space-y-3">
                             {contacts.map((contact) => (
                                 <a

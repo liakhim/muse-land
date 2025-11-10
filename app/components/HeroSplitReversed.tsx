@@ -13,10 +13,10 @@ interface HeroSplitReversedProps {
 
 export default function HeroSplitReversed({
                                               subtitle = "Product Introduction",
-                                              titleWord1 = "Create",
-                                              titleWord2 = "Innovative",
+                                              titleWord1 = "Stay in",
+                                              titleWord2 = "sync",
                                               titleWord3 = "Solutions",
-                                              description = "Our platform provides all the necessary tools for rapid business development in the digital environment",
+                                              description = "Try industry-leading music software for free, pay it off over time and own it forever.",
                                               buttonText = "Get Started",
                                               imageSrc = "/src/images/right.png",
                                               imageAlt = "Image"
@@ -45,20 +45,20 @@ export default function HeroSplitReversed({
                                 {description}
                             </p>
 
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
+                            <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                                 {buttonText}
                             </button>
                         </div>
                     </div>
 
                     <div className="flex justify-center lg:justify-end">
-                        <div className="w-full max-w-md lg:max-w-lg">
+                        <div className="w-full">
                             <div className="rounded-3xl shadow-2xl p-4">
                                 <Image
                                   src={imageSrc}
                                   alt={imageAlt}
-                                  width={512}
-                                  height={340}
+                                  width={712}
+                                  height={440}
                                   className="rounded-2xl object-cover w-full h-full"
                                 />
                             </div>
