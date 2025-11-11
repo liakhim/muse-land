@@ -10,7 +10,6 @@ export default function Footer() {
     const menuItems = [
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About us' },
-        { href: '/services', label: 'Features' },
         { href: '/blog', label: 'Blog' },
         { href: '/contact', label: 'Contacts' },
     ]

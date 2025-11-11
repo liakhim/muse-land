@@ -53,15 +53,6 @@ export default function HamburgerButton() {
                     >
                         About
                     </Link>
-                    <Link
-                        href="/features"
-                        onClick={() => {
-                            setIsOpen(false);
-                        }}
-                        className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 border-b border-gray-100"
-                    >
-                        Features
-                    </Link>
 
                     <Link
                         href="/blog"

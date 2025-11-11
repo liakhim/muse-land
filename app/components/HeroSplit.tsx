@@ -3,8 +3,7 @@ import Image from 'next/image'
 
 interface HeroSplitProps {
     subtitle?: string
-    titleWord1?: string
-    titleWord2?: string
+    titleWord?: string
     titleWord3?: string
     description?: string
     buttonText?: string
@@ -14,8 +13,7 @@ interface HeroSplitProps {
 
 export default function HeroSplitWithImage({
                                                subtitle = "Product Introduction",
-                                               titleWord1 = "Create",
-                                               titleWord2 = "Innovative",
+                                               titleWord = "Create Innovative",
                                                titleWord3 = "Solutions",
                                                description = "Our platform provides all the necessary tools for rapid business development",
                                                buttonText = "Get Started",
@@ -46,7 +44,7 @@ export default function HeroSplitWithImage({
                     </div>
 
                     <div className="order-1 lg:order-2 text-left">
-                        <div className="max-w-md">
+                        <div>
 
                             <div className="flex items-center gap-2 mb-4">
                                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
@@ -56,8 +54,7 @@ export default function HeroSplitWithImage({
                             </div>
 
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                <span className="text-gray-900">{titleWord1}</span>{' '}
-                                <span className="text-gray-900">{titleWord2}</span>
+                                <span className="text-gray-900">{titleWord}</span>
                                 <br />
                                 <span className="text-blue-600">{titleWord3}</span>
                             </h1>

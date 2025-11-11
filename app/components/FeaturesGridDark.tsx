@@ -40,7 +40,7 @@ export default function FeaturesGridDark({
                                              ]
                                          }: FeaturesGridProps) {
     return (
-        <div className="relative bg-black py-32 md:py-40 overflow-x-visible overflow-y-hidden">
+        <div className="relative bg-black pt-15 pt-35 md:pt-15 md:pb-35 overflow-x-visible overflow-y-hidden">
 
             {/* Контент */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

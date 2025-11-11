@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { sohne } from './fonts'
+import {Montserrat, Merriweather} from './fonts'
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
 
@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={sohne.variable}>
-            <body className={`antialiased flex flex-col justify-start min-h-screen ${sohne.className}`}>
+        <html lang="en">
+            <body className={`antialiased flex flex-col justify-start min-h-screen`}>
                 <Navigation/>
                 <main>
                     <div>

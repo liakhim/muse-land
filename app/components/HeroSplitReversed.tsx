@@ -22,7 +22,7 @@ export default function HeroSplitReversed({
                                               imageAlt = "Image"
                                           }: HeroSplitReversedProps) {
     return (
-        <div className="bg-white flex items-center">
+        <div className="bg-white flex items-center pt-15 pb-25">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

@@ -76,7 +76,6 @@ export default function TestimonialsSection({
     return (
         <div className="relative bg-black py-16 md:py-24">
 
-            {/* PNG фон с абсолютным позиционированием */}
             <div style={{width: '1000px', height: '1000px', top: 0, right: 0, zIndex: 1, opacity: 0.4}} className="absolute">
                 <div
                     className="bg-cover bg-center opacity-100"
@@ -84,18 +83,14 @@ export default function TestimonialsSection({
                 />
             </div>
 
-            {/* Затемнение для лучшей читаемости */}
             <div className="absolute inset-0 bg-black/60"></div>
 
-            {/* Контент */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-                    {/* Левая часть - заголовок и описание */}
                     <div className="text-left">
                         <div className="max-w-lg">
 
-                            {/* Подзаголовок */}
                             <div className="flex items-center gap-2 mb-4">
                                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                                 <p className="text-gray-400 text-sm font-medium uppercase tracking-wide">
@@ -103,17 +98,14 @@ export default function TestimonialsSection({
                                 </p>
                             </div>
 
-                            {/* Заголовок */}
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                                 <span className="text-white">{title}</span>
                             </h1>
 
-                            {/* Описание */}
                             <p className="text-gray-300 text-lg leading-relaxed mb-8">
                                 {subtitle}
                             </p>
 
-                            {/* Статистика */}
                             <div className="grid grid-cols-2 gap-6 mt-12">
                                 <div className="text-center">
                                     <div className="text-3xl font-bold text-white mb-2">98%</div>
@@ -127,7 +119,6 @@ export default function TestimonialsSection({
                         </div>
                     </div>
 
-                    {/* Правая часть - отзывы */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {testimonials.map((testimonial) => (
                             <div
@@ -140,14 +131,14 @@ export default function TestimonialsSection({
                                 </div>
 
                                 {/* Текст отзыва */}
-                                <p className="text-gray-200 text-sm leading-relaxed mb-4 italic">
+                                <p className="text-gray-200 text-xs leading-relaxed mb-4 italic">
                                     "{testimonial.content}"
                                 </p>
 
                                 {/* Информация о клиенте */}
                                 <div className="flex items-center">
-                                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                                    <div className="w-10 h-10 min-h-10 min-w-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                                        <span className={'text-center'}>{testimonial.name.split(' ').map(n => n[0]).join('')}</span>
                                     </div>
                                     <div>
                                         <div className="text-white font-semibold text-sm">
