@@ -1,4 +1,3 @@
-// components/TestimonialsSection.tsx
 'use client'
 
 interface Testimonial {
