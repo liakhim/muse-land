@@ -75,10 +75,10 @@ export default function TestimonialsSection({
     }
 
     return (
-        <div className="relative bg-black py-16 md:py-24 overflow-hidden">
+        <div className="relative bg-black py-16 md:py-24">
 
             {/* PNG фон с абсолютным позиционированием */}
-            <div style={{width: '1000px', height: '1000px', top: 0, right: 0}} className="absolute">
+            <div style={{width: '1000px', height: '1000px', top: 0, right: 0, zIndex: 1, opacity: 0.4}} className="absolute">
                 <div
                     className="bg-cover bg-center opacity-100"
                     style={{ backgroundImage: `url(${backgroundImage})`, width: '1000px',  height: '1000px', top: 0, right: 0 }}
