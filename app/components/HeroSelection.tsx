@@ -9,14 +9,15 @@ interface HeroSectionProps {
     buttonText?: string
 }
 
-export default function HeroSection({
-                                        subtitle = "New approach",
-                                        titleWord1 = "Grow",
-                                        titleWord2 = "your business",
-                                        titleWord3 = "online",
-                                        description = "Use modern technologies to automate processes and increase profits",
-                                        buttonText = "Start using"
-                                    }: HeroSectionProps) {
+export default function HeroSection(
+    {
+        subtitle = "New approach",
+        titleWord1 = "Grow",
+        titleWord2 = "your business",
+        titleWord3 = "online",
+        description = "Use modern technologies to automate processes and increase profits",
+        buttonText = "Start using"
+    }: HeroSectionProps) {
     return (
         <div className="bg-white w-full">
             <div className="px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-center container max-w-7xl mx-auto " style={{ fontFamily: 'Sohne, sans-serif' }}>

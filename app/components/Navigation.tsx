@@ -3,6 +3,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Burger from "@/app/components/Burger";
 
 export default function Navigation() {
     const pathname = usePathname()
@@ -19,7 +20,6 @@ export default function Navigation() {
         <nav style={{position: 'fixed', width: '100%'}} className="bg-black z-20 text-white shadow-xl">
             <div className="mx-auto px-4 sm:px-6 lg:px-8 container max-w-7xl">
                 <div className="flex items-center justify-between h-16">
-                    {/* Логотип */}
                     <Link
                         href="/"
                         className="text-2xl font-bold hover:text-blue-200 transition-colors"
@@ -27,8 +27,7 @@ export default function Navigation() {
                         YourBrand
                     </Link>
 
-                    {/* Меню */}
-                    <div className="flex space-x-1">
+                    <div className="flex space-x-1 max-md:hidden">
                         {menuItems.map((item) => (
                             <Link
                                 key={item.href}
@@ -44,10 +43,13 @@ export default function Navigation() {
                         ))}
                     </div>
 
-                    {/* Кнопка CTA */}
-                    <button className="bg-white text-blue-600 cursor-pointer px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg ">
+                    <button className="max-md:hidden bg-white text-blue-600 cursor-pointer px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg ">
                         Начать
                     </button>
+
+                    <div className={'burger min-md:hidden'}>
+                        <Burger/>
+                    </div>
                 </div>
             </div>
         </nav>
