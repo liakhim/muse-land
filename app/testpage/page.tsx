@@ -24,7 +24,98 @@ export const metadata: Metadata = {
         images: ['/og-about.jpg'],
     },
 };
-export default function Testpage() {
+async function getProductData() {
+    // Здесь может быть fetch к вашему API
+    const response = await fetch(`/data.json`);
+    console.log(response)
+    if (!response.ok) {
+        throw new Error('Failed to fetch product');
+    }
+    return response.json();
+}
+export default async  function Testpage() {
+    // const product = await getProductData();
+    const page = {
+        page: {
+            meta: {
+                title: '',
+                description: '',
+                favicon: ''
+            },
+            open_graph: {
+                title: '',
+                description: '',
+                image: ''
+            },
+            background: {
+                color: '',
+                type: 'image', // || video || 3d*
+                content: '' // url
+            },
+            header: {
+                logo: {
+                    type: 'image',
+                    content: ''
+                }
+            },
+            body: {
+                content_position: 'left', // || 'right'
+                desktop_percent_width: {
+                    '4096': 20,
+                    '2048': 20,
+                    '1920': 20,
+                    '1560': 20,
+                    '1366': 20,
+                    '1280': 20,
+                    '1024': 20,
+                    '768': 20
+                },
+                title: 'Title of page',
+                banner: {
+                    display_delay: 20000,
+                    display_time: 20000,
+                    position: 'top_left', // || top_right || bottom_right || bottom_left
+                    type: 'image', // || template
+                },
+                type: 'static_content', // || slider_content || actions_content,
+                content: {
+                    slider_navigation_type: 'dots', // || numbers || progress_bar
+                    slides: [
+                        {
+                            id: 0,
+                            order: 0,
+                            type: 'content', // || start || form || finish
+                            title: '',
+                            subtitle: '',
+                            description: '',
+                            action_text: '',
+                            action_background_color: ''
+                        },
+                        {
+                            id: 1,
+                            order: 1,
+                            type: 'form', // || start || content || finish
+                            title: '',
+                            subtitle: '',
+                            description: '',
+                            inputs: [
+                                {
+                                    type: 'text', // email || phone,
+                                    placeholder: '',
+                                    label: ''
+                                }
+                            ],
+                            action_text: '',
+                            action_background_color: ''
+                        }
+                    ]
+                }
+            },
+            footer: {
+                copyright_text: 'Все права защищены'
+            }
+        }
+    };
     return (
         <>
             <div className={'h-screen w-full m-auto max-w-[2560px] max-h-[1374px] overflow-hidden flex flex-col justify-start'}>
@@ -32,26 +123,27 @@ export default function Testpage() {
                     <p className={'text-xs'}>+7(999)980-98-98</p>
                 </header>
                 <main style={{height: 'calc(100vh - 30px)'}}>
-                    <div className={'h-full flex flex-row justify-between'}>
-                        <div className={'w-[70%]'}>
-                            <img className={'h-full w-full'}
+                    <div className={'h-full flex flex-col md:flex-row justify-between'}>
+                        <div className={'md:w-[70%] w-full'}>
+                            <img className={'h-full w-full hidden md:block'}
                                  style={{objectFit: 'cover'}}
                                  src="https://myheat.net/assets/images/products/290/mh-ex-termostat-s-1.png"
                                  alt=""/>
+                            <img className={'block md:hidden'} src="/src/images/mob.png" alt=""/>
                             {/*<video id="bg-video" autoPlay muted loop playsInline*/}
                             {/*       controlsList="nodownload nofullscreen noremoteplayback">*/}
                             {/*    <source src="https://videocdn.cdnpk.net/videos/fa9c599b-fd93-5d02-ad0a-1b632c21df54/horizontal/previews/watermarked/large.mp4" type="video/mp4"/>*/}
                             {/*</video>*/}
                         </div>
                         <aside
-                            className={'w-[30%] h-full transition flex flex-col justify-start border-l border-gray-800'}>
+                            className={'md:w-[30%] w-full h-full transition flex flex-col justify-start border-l border-gray-800'}>
                             <div className={'p-3 mt-3'}>
                                 <img className={'w-[120px]'} src="https://new.myheat.net/res/img/logo-new.png" alt=""/>
                             </div>
                             <div className={'pt-3 px-3'}>
-                                <h2 className={'text-2xl font-bold'}>Комнатный термостат MyHeat (белый)</h2>
+                                <h2 className={'text-2xl font-bold'}>{page.page.body.title}</h2>
                             </div>
-                            <div className={'p-5 h-full'}>
+                            <div className={'p-3 md:p-5 h-full'}>
                                 <div className={'slider flex flex-col mt-1 py-2 px-1 overflow-y-auto'}>
 
                                     {/*<div>*/}
@@ -80,44 +172,43 @@ export default function Testpage() {
                                         <form>
                                             <div className="mb-3">
                                                 <label htmlFor="emailInput"
-                                                       className="block mb-2 text-sm font-medium text-gray-300">
+                                                       className="block mb-0.5 md:mb-2 text-sm font-medium text-gray-300">
                                                     Ваше имя
                                                 </label>
                                                 <input
                                                     type="email"
                                                     id="emailInput"
-                                                    className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-400"
+                                                    className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full md:p-2.5 p-1.5 placeholder-gray-400"
                                                     placeholder=""
                                                     required
                                                 />
                                             </div>
-                                            <div className="mb-10">
+                                            <div className="mb-5 md:mb-10">
                                                 <label htmlFor="emailInput"
-                                                       className="block mb-2 text-sm font-medium text-gray-300">
+                                                       className="block mb-0.5 md:mb-2 text-sm font-medium text-gray-300">
                                                     Ваш email адрес
                                                 </label>
                                                 <input
                                                     type="email"
                                                     id="emailInput"
-                                                    className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-400"
+                                                    className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full md:p-2.5 p-1.5 placeholder-gray-400"
                                                     placeholder="name@company.com"
                                                     required
                                                 />
                                             </div>
                                             <button type="reset"
-                                                    className="cursor-pointer w-full text-gray-300 border border-gray-600 hover:bg-gray-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition-colors">
+                                                    className="cursor-pointer w-full text-gray-300 border border-gray-600 hover:bg-gray-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-800 font-medium rounded-lg text-sm px-3 md:px-5 py-2 md:py-3 text-center transition-colors">
                                                 <span className={'font-bold'}>Очистить форму</span>
                                             </button>
                                             <button type="submit"
-                                                    className="cursor-pointer mt-3 w-full text-white bg-gradient-to-r from-orange-500 via-orange-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-800 font-medium rounded-lg text-sm px-5 py-3 text-center shadow-lg transition-all">
+                                                    className="cursor-pointer mt-3 w-full text-white bg-gradient-to-r from-orange-500 via-orange-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-800 font-medium rounded-lg text-sm px-3 md:px-5 py-2 md:py-3 text-center shadow-lg transition-all">
                                                 <span className={'font-bold'}>Отправить</span>
                                             </button>
                                         </form>
                                     </div>
                                     <div>
-                                        <div
-                                            className="slider-dots flex flex-row justify-center align-middle gap-3 mt-6 mb-3">
-                                        <div className="slider-dot active"></div>
+                                        <div className="slider-dots flex flex-row justify-center align-middle gap-3 mt-6 mb-3">
+                                            <div className="slider-dot active"></div>
                                             <div className="slider-dot"></div>
                                             <div className="slider-dot"></div>
                                         </div>
@@ -126,7 +217,7 @@ export default function Testpage() {
                             </div>
 
                             <div className={'mt-auto p-2 flex flex-col align-bottom h-[50px] border-t border-gray-800'}>
-                                <span className={'text-xs text-center mt-1'}>Lorem ipsum dolor sit amet.</span>
+                                <span className={'text-xs text-center mt-1'}>{page.page.footer.copyright_text}</span>
                                 <span className={'text-xs text-center'}>(c) 2026</span>
                             </div>
                         </aside>
