@@ -115,7 +115,6 @@ export const Merriweather = localFont({
             weight: '900',
             style: 'normal',
         },
-        // Добавьте другие варианты веса по необходимости
     ],
     variable: '--font-etude-noire',
     display: 'swap',

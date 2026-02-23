@@ -1,0 +1,82 @@
+{
+  "page": {
+    "meta": {
+      "title": "",
+      "description": "",
+      "favicon": ""
+    },
+    "open_graph": {
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "background": {
+      "color": "",
+      "type": "image",
+      "content": ""
+    },
+    "header": {
+      "logo": {
+        "type": "image",
+        "content": ""
+      }
+    },
+    "body": {
+      "content_position": "left",
+      "desktop_percent_width": {
+        "4096": 20,
+        "2048": 20,
+        "1920": 20,
+        "1560": 20,
+        "1366": 20,
+        "1280": 20,
+        "1024": 20,
+        "768": 20
+      },
+      "title": "",
+      "banner": {
+        "display_delay": 20000,
+        "display_time": 20000,
+        "desktop_position": "top_left",
+        "mobile_position": "top",
+        "type": "image"
+      },
+      "type": "static_content",
+      "content": {
+        "slider_navigation_type": "dots",
+        "slides": [
+          {
+            "id": 0,
+            "order": 0,
+            "type": "content",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "action_text": "",
+            "action_background_color": ""
+          },
+          {
+            "id": 1,
+            "order": 1,
+            "type": "form",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "inputs": [
+              {
+                "type": "text",
+                "placeholder": "",
+                "label": ""
+              }
+            ],
+            "action_text": "",
+            "action_background_color": ""
+          }
+        ]
+      }
+    },
+    "footer": {
+      "copyright_text": "Все права защищены"
+    }
+  }
+}
